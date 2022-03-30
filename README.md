@@ -1,6 +1,8 @@
 # consumer-lending-scoring-model
- 
-* Folders
+
+Model training file - in Jupyternotebook
+
+Folders
 - data: 
 ForTraining: customer data used for model fitting
 ForQA: applicant data used for QA
