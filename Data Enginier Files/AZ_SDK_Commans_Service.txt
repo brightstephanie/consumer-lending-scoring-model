@@ -1,0 +1,16 @@
+
+
+
+az webapp create --name service-mpd-TWN-FPD-v1-0 --plan plan-ml-models --resource-group prod_ScoringBlackBox_Linux --deployment-container-image-name prodmlcontainerregistry.azurecr.io/package@sha256:ec7c26e587bf7550684a5bbfcea9b5e07263d5014b8ecfe5a9f631089b3e7a0a --subscription 19277e90-a783-401b-925e-064aba7220f9
+
+
+
+
+az webapp config container set --name service-mpd-TWN-FPD-v1-0 --resource-group prod_ScoringBlackBox_Linux --docker-custom-image-name prodmlcontainerregistry.azurecr.io/package@sha256:ec7c26e587bf7550684a5bbfcea9b5e07263d5014b8ecfe5a9f631089b3e7a0a --docker-registry-server-url https://prodmlcontainerregistry.azurecr.io --docker-registry-server-user ProdMLContainerRegistry --docker-registry-server-password HEE2X+fpGu7uuG6tqQ3WA6xE7J5nIZE0 --subscription 19277e90-a783-401b-925e-064aba7220f9
+
+az webapp log tail --name service-mpd-precheck-conversion-v1-1 --resource-group prod_ScoringBlackBox_Linux --subscription 19277e90-a783-401b-925e-064aba7220f9
+
+
+az acr credential show --name prodmlcontainerregistry --subscription 19277e90-a783-401b-925e-064aba7220f9
+
+az acr update -n prodmlcontainerregistry --admin-enabled true --subscription 19277e90-a783-401b-925e-064aba7220f9
