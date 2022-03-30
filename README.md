@@ -3,7 +3,7 @@
 Model training file - in Jupyternotebook
 
 Folders
-- data: 
+- DataSourcePreprocessing: 
 ForTraining: customer data used for model fitting
 ForQA: applicant data used for QA
 
